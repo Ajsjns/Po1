@@ -36,14 +36,15 @@ conn.relayMessage(m.chat, { viewOnceMessage: { message: { interactiveMessage: { 
 > •رتــبــتــك : ${role}
 *• ──╾⊱﹝⚜️﹞⊰╼── •*
 ╗───¤مــعلــومــات الــ🤖بــوت
-> •إســم الــبــوت: -ستيفن⁵¹⁷. 
-> •الــمــطــور :-ستيفڤن⁵¹⁷.
+> •إســم الــبــوت: -ذاك الامير⁷. 
+> •الــمــطــور :-ذاك الامير 
+.رقم المطور 967718544762
 > •مــدة الــتــشــغــيل : ${uptime}
 *• ──╾⊱﹝⚜️﹞⊰╼── •*
 *~⌬ تــ✍︎ــوقــيــع ↡~*🖋️
 *⌞⚜️┊ス M.Z┊⚜️⌝*
 *• ──╾⊱﹝⚜️﹞⊰╼── •*
-> Copyright © 2024 -ستيڤن⁵¹⁷.`,subtitle: "Elsony",},header: { hasMediaAttachment: true,...(await prepareWAMessageMedia({ image : { url: Elsony } }, { upload: conn.waUploadToServer }, {quoted: m}))},
+> Copyright © 2024 -ذاك الامير.`,subtitle: "Elsony",},header: { hasMediaAttachment: true,...(await prepareWAMessageMedia({ image : { url: Elsony } }, { upload: conn.waUploadToServer }, {quoted: m}))},
                     contextInfo: {
                         mentionedJid: [m.sender],
                         isForwarded: false,
@@ -56,7 +57,7 @@ conn.relayMessage(m.chat, { viewOnceMessage: { message: { interactiveMessage: { 
                                     title: '⌈🛡╎الــقــوائـــم╎🛡⌋',
                                     sections: [
                                         {
-                                            title: 'مــرحـ🛡ـبــا بــك فـي مــ☑هــام ستيڤن بـ🤖ـوت',
+                                            title: 'مــرحـ🛡ـبــا بــك فـي مــ☑هــام ذاك الامير بـ🤖ـوت',
                                             highlight_label: 'بعبص براحتك يابرو 🤖',
                                             rows: [
                                                 {

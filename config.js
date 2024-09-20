@@ -13,9 +13,9 @@ import { en, es, id, ar, pt } from "./lib/idiomas/total-idiomas.js"
 // [ES] > Agrega el número que será Bot y los que serán propietarios.
 // [EN] > Add the number that will be Bot and those that will be owners.
 global.owner = [
-["436703061270457", 'س', true], 
-["967783179256", 'ستيفن', true], 
-["967776928634", '-شيخ⁵١⁷.', true], //𝙂𝙖𝙩𝙖𝘽𝙤𝙩-𝙈𝘿 💖🐈
+["967718544762", 'ذاك الامير', true], 
+["967718544762", 'ذاك الامير', true], 
+["967718544762", 'ذاك ✺لامير.', true], //𝙂𝙖𝙩𝙖𝘽𝙤𝙩-𝙈𝘿 💖🐈
 ]
 
 global.mods = []
@@ -124,8 +124,8 @@ global.desc2 = '' // Add long description (90 caractres max) (Este parámetro se
 global.country = '' // Add country, example: 🇪🇨
 // • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • •
 
-global.packname = `╭ ستيفن  🐈\n┃\n┃ » 𝚃𝚎𝚕𝚎𝚐𝚛𝚊𝚖:\n┃ @g\n┃\n┃ » 𝚈𝚘𝚞𝚃𝚞𝚋𝚎:\n┃ @g\n┃\n┃ » 𝙸𝚗𝚜𝚝𝚊𝚐𝚛𝚊𝚖:\n┃ @f0.0n1\n╰━━━━━━━━•` //"𝙂𝙖𝙩𝙖𝘽𝙤𝙩-𝙈𝘿 🐈"
-global.author = ` ╭ ⌞🔰┊ ستيفن 𝑩𝑶𝑻 ┊🔰⌝ \n ┃\n ┃ » 𝙶𝚒𝚝𝙷𝚞𝚋:\n ┃ g-Li\n ┃\n ┃ ⊹ Super Bot WhatsApp.\n ┃\n ┃ ♡ Apoyo\n ┃ » 𝙿𝚊𝚢𝙿𝚊𝚕:\n ┃ @g\n ╰━━━━━━━━•` //"𝙂𝙖𝙩𝙖 𝘿𝙞𝙤𝙨"
+global.packname = `╭ ذاك الامير  🐈\n┃\n┃ » 𝚃𝚎𝚕𝚎𝚐𝚛𝚊𝚖:\n┃ @g\n┃\n┃ » 𝚈𝚘𝚞𝚃𝚞𝚋𝚎:\n┃ @g\n┃\n┃ » 𝙸𝚗𝚜𝚝𝚊𝚐𝚛𝚊𝚖:\n┃ @f0.0n1\n╰━━━━━━━━•` //"𝙂𝙖𝙩𝙖𝘽𝙤𝙩-𝙈𝘿 🐈"
+global.author = ` ╭ ⌞🔰┊ ذاك الامير 𝑩𝑶𝑻 ┊🔰⌝ \n ┃\n ┃ » 𝙶𝚒𝚝𝙷𝚞𝚋:\n ┃ g-Li\n ┃\n ┃ ⊹ Super Bot WhatsApp.\n ┃\n ┃ ♡ Apoyo\n ┃ » 𝙿𝚊𝚢𝙿𝚊𝚕:\n ┃ @g\n ╰━━━━━━━━•` //"𝙂𝙖𝙩𝙖 𝘿𝙞𝙤𝙨"
 
 // • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • •
 // [ES] > INFORMACIÓN DE VERSIONES DEL BOT, POR FAVOR 
@@ -133,7 +133,7 @@ global.author = ` ╭ ⌞🔰┊ ستيفن 𝑩𝑶𝑻 ┊🔰⌝ \n ┃\n ┃
 // [EN] > BOT VERSION INFORMATION, PLEASE KEEP THIS UNCHANGED, WE STRIVE DAILY TO PROVIDE YOU WITH A BOT FOR THE COMMUNITY, BE GRATEFUL
 global.vs = "1.7.0"
 global.vsJB = "3.0 (Beta)"
-global.gt = "⌞🔰┊ ستيفن 𝑩𝑶𝑻 ┊🔰⌝"
+global.gt = "⌞🔰┊ ذاك الامير 𝑩𝑶𝑻 ┊🔰⌝"
 
 fetchDataAndProcess().catch(error => console.error('Ocurrió un error:', error))
 
@@ -161,8 +161,8 @@ global.eg = '╰⊱💚⊱ *تم بنجاح | 𝙎𝙐𝘾𝘾𝙀𝙎𝙎* ⊱�
 global.exito = eg
 
 // • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • •
-global.wm = "ستيفن"
-global.igfg = "⌞🔰┊ ستيفن 𝑩𝑶𝑻 ┊🔰⌝"
+global.wm = "ذاك الامير"
+global.igfg = "⌞🔰┊ ذاك الامير 𝑩𝑶𝑻 ┊🔰⌝"
 global.nomorown =  [
 ["436703061270457", 'س', 1], 
 ["967783179256", 'ستيفن', 1],  

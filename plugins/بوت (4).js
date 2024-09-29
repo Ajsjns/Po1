@@ -1,50 +1,80 @@
-import fetch from "node-fetch"
+import cheerio from 'cheerio';
+import fetch from 'node-fetch';
+import moment from 'moment';
 
-let handler = async (m, {
-    conn,
-    args,
-    usedPrefix,
-    command
-}) => {
-    let text
-    if (args.length >= 1) {
-        text = args.slice(0).join(" ")
-    } else if (m.quoted && m.quoted.text) {
-        text = m.quoted.text
-    } else throw "هاذا الامر تحت الصيانه🙂‍↔️"
-    await m.reply(wait)
-    const messages = [
-    { role: 'system', content: 'You are a helpful assistant.' },
-    { role: 'user', content: text },
-  ];
+let handler = async (m, { conn, args, usedPrefix, text, command }) => {
+    if (!text) return m.reply("مرحبًا، كيف يمكنني مساعدتك اليوم؟");
+
     try {
-        let res = await chatWithGPT(messages)
-        await m.reply(res.choices[0].message.content)
-    } catch (e) {
-        await m.reply('الامر هاذا ليس تحت الصيانه استخدم امر .ماس')
-    }
-}
-handler.help = ["بوت"]
-handler.tags = ["ai"];
-handler.command = /^(بوت)$/i
+        await m.reply("يرجى الانتظار...");
 
-export default handler
-
-/* New Line */
-async function chatWithGPT(messages) {
-    try {
-        const response = await fetch("https://chatbot-ji1z.onrender.com/chatbot-ji1z", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify({ messages }),
-        });
-
-        const data = await response.json();
-        return data;
+        const result = await CleanDx(text);
+        await m.reply(result);
     } catch (error) {
-        console.error("Error fetching data:", error);
-        throw error;
+        console.error(error);
+        await m.reply("حدث خطأ أثناء معالجة الطلب. يرجى المحاولة مرة أخرى لاحقًا.");
     }
+};
+
+handler.help = ["cleandx"];
+handler.tags = ["internet"];
+handler.command = /^(dx|bot|بوت|vcv)$/i;
+export default handler;
+
+async function CleanDx(your_qus) {
+    const linkaiList = [];
+    const linkaiId = generateRandomString(21);
+    const Baseurl = "https://vipcleandx.xyz/";
+
+    linkaiList.push({
+        content: your_qus,
+        role: "user",
+        nickname: "",
+        time: formatTime(),
+        isMe: true
+    });
+
+    linkaiList.push({
+        content: "جاري التفكير...",
+        role: "assistant",
+        nickname: "AI",
+        time: formatTime(),
+        isMe: false
+    });
+
+    const response = await fetch(`${Baseurl}v1/chat/gpt/`, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            "X-Forwarded-For": generateRandomIP(),
+            "Referer": Baseurl,
+            "Accept": "application/json, text/plain, */*",
+            "Accept-Language": "ar"
+        },
+        body: JSON.stringify({
+            list: linkaiList,
+            id: linkaiId,
+            title: your_qus,
+            prompt: "",
+            temperature: 0.5,
+            models: "0",
+            continuous: true
+        })
+    });
+
+    if (!response.ok) throw new Error('فشل في جلب البيانات من واجهة برمجة التطبيقات CleanDx');
+    return await response.json(); // يفترض أن API يعيد JSON
+}
+
+function generateRandomString(length) {
+    const characters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+    return Array.from({ length }, () => characters.charAt(Math.floor(Math.random() * characters.length))).join('');
+}
+
+function generateRandomIP() {
+    return Array.from({ length: 4 }, () => Math.floor(Math.random() * 256)).join('.');
+}
+
+function formatTime() {
+    return moment().format('HH:mm:ss');
 }
